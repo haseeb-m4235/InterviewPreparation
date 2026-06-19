@@ -1,5 +1,5 @@
 from typing_extensions import TypedDict
-
+from dataclasses import dataclass
 
 class InterviewerState(TypedDict):
     job_description: str
@@ -8,3 +8,7 @@ class InterviewerState(TypedDict):
     current_index: int
     answers_list: list[str]
     evaluation_report: str 
+
+@dataclass
+class Context:
+    model_name: str
